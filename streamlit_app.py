@@ -205,4 +205,13 @@ elif selected_task == 'Histograms':
 
 
 
+elif selected_task == 'Euclidian Distance':
+    fig, ax = plt.subplots()
+    index_mean= df.groupby(['Index']).mean()
+    ax.scatter(x=index_mean['Weight'], y=index_mean['Height'])
+
+
+
+    # px.scatter()
     
+    st.pyplot(fig)
