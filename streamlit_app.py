@@ -12,11 +12,11 @@ df['Index'] = df['Index'].map({0:'Extremely Weak', 1:'Weak', 2:'Normal', 3:'Over
 
 
 
-nb_weight_men = df[df['Gender'] == 'Male']['Index'].value_counts()
-nb_weight_women = df[df['Gender'] == 'Female']['Index'].value_counts()
+# nb_weight_men = df[df['Gender'] == 'Male']['Index'].value_counts()
+# nb_weight_women = df[df['Gender'] == 'Female']['Index'].value_counts()
 
-nb_weight_men = pd.DataFrame({'BMI': nb_weight_men.index, 'Counts': nb_weight_men.values})
-nb_weight_women = pd.DataFrame({'BMI': nb_weight_women.index, 'Counts': nb_weight_women.values})
+# nb_weight_men = pd.DataFrame({'BMI': nb_weight_men.index, 'Counts': nb_weight_men.values})
+# nb_weight_women = pd.DataFrame({'BMI': nb_weight_women.index, 'Counts': nb_weight_women.values})
 
 # App Title
 
@@ -90,25 +90,26 @@ elif selected_task == 'Data Overview':
         st.write(df)
 
 
-    nb_weight_men = df[df['Gender'] == 'Male']['Index'].value_counts()
-    nb_weight_women = df[df['Gender'] == 'Female']['Index'].value_counts()
+    # nb_weight_men = df[df['Gender'] == 'Male']['Index'].value_counts()
+    # nb_weight_women = df[df['Gender'] == 'Female']['Index'].value_counts()
 
-    nb_weight_men = pd.DataFrame({'BMI': nb_weight_men.index, 'Counts': nb_weight_men.values})
-    nb_weight_women = pd.DataFrame({'BMI': nb_weight_women.index, 'Counts': nb_weight_women.values})
+    # nb_weight_men = pd.DataFrame({'BMI': nb_weight_men.index, 'Counts': nb_weight_men.values})
+    # nb_weight_women = pd.DataFrame({'BMI': nb_weight_women.index, 'Counts': nb_weight_women.values})
 
-    fig1 = px.bar(
-        nb_weight_men, x = "BMI", y = "Counts",
-        template = 'seaborn',
-        title = 'Men' )
+    # fig1 = px.bar(
+    #     nb_weight_men, x = "BMI", y = "Counts",
+    #     template = 'seaborn',
+    #     title = 'Men' )
 
-    st.plotly_chart(fig1) 
+    # st.plotly_chart(fig1) 
 
-    fig2 = px.bar(
-        nb_weight_women, x = "BMI", y = "Counts",
-        template = 'seaborn',
-        title = 'Women' )
+    # fig2 = px.bar(
+    #     nb_weight_women, x = "BMI", y = "Counts",
+    #     template = 'seaborn',
+    #     title = 'Women' )
 
-    st.plotly_chart(fig2) 
+    # st.plotly_chart(fig2) 
+
     
 
 
